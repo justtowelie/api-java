@@ -3,16 +3,13 @@ package test;
 import groovy.util.logging.Slf4j;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pojos.BookingDetailsPojo;
 import pojos.BookingIdPojo;
-import pojos.GetBookingResponsePojo;
 import utils.RestClient;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -34,11 +31,10 @@ public class Tests {
     void getBooking() {
         // Perform GET request to /booking endpoint
         Response response = restClient.getRequest("/booking");
-        assertEquals(200, response.getStatusCode(), "Status code is not as expected");
+        restClient.verifySuccessfulStatus(response);
         int bookingId = response.jsonPath().getInt("[0].bookingid");
         bookingIdPojo.setBookingid(bookingId); // Set the booking ID
         assertNotNull(response.body());
-        System.out.println("booking id is : " + bookingId);
     }
 
     @Test
@@ -48,9 +44,39 @@ public class Tests {
         getBooking(); // Ensure that getBooking() is called before getting the booking ID
         int id = bookingIdPojo.getBookingid(); // Retrieve the booking ID from BookingIdPojo
         Response response = restClient.getRequest("/booking/" + id);
-        assertEquals(200, response.getStatusCode(), "Status code is not as expected");
+        restClient.verifySuccessfulStatus(response);
         int totalPrice = response.jsonPath().getInt("totalprice");
         assertEquals(totalPrice, 111, "Total price is not as expected");
     }
 
+
+    @Test
+    @DisplayName("Create a booking")
+    void createBooking()
+    {
+        BookingDetailsPojo bookingDetailsPojo = new BookingDetailsPojo(true, "breakfast");
+        Response response = restClient.postRequest(bookingDetailsPojo, "/booking");
+        restClient.verifySuccessfulStatus(response);
+    }
+
+    @Test
+    @DisplayName("update existing booking")
+    void updateBooking()
+    {
+        getBooking();
+        int id = bookingIdPojo.getBookingid(); // Retrieve the booking ID from BookingIdPojo
+        BookingDetailsPojo bookingDetailsPojo = new BookingDetailsPojo(true, "breakfast");
+        Response response = restClient.putRequest(bookingDetailsPojo, "/booking/" + id);
+        restClient.verifySuccessfulStatus(response);
+    }
+
+    @Test
+    @DisplayName("delete a booking")
+    void deleteBooking()
+    {
+        getBooking();
+        int id = bookingIdPojo.getBookingid(); // Retrieve the booking ID from BookingIdPojo
+        Response response = restClient.deleteRequest("/booking/" + id);
+        assertEquals(201, response.getStatusCode(), "Status code is not as expected");
+    }
 }
