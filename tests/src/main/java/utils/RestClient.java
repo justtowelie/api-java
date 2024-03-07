@@ -28,9 +28,9 @@ public class RestClient {
                 .get(endpoint);
     }
 
-    public Response postRequest(Object body, String endpoint) {
+    public Response postRequest(Object body, String endpoint, ContentType contentType) {
         // Perform POST request
-        return RestAssured.given().contentType(ContentType.JSON).body(body).post(endpoint);
+        return RestAssured.given().contentType(contentType).body(body).post(endpoint);
     }
 
     public Response putRequest(Object body, String endpoint) {

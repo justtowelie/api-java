@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47c28318-c1bf-4106-ac38-f39ca8da4db2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/src/main/java/utils/DataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest-commons/src/main/java/test/XmlTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/src/main/java/pojos/XmlBookingPojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-commons/src/main/java/test/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-commons/src/main/java/test/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-commons/target/classes/test/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/rest-commons/target/classes/test/Tests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/main/java/pojos/BookingDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/main/java/pojos/BookingDates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/main/java/pojos/BookingIdPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/main/java/pojos/BookingIdPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/main/java/pojos/GetBookingResponsePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/main/java/pojos/BookingDetailsPojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/src/main/java/utils/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/main/java/utils/RestClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +31,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2dM1YNQWn6qq8dKBb61t5fQbL5N" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -52,9 +51,10 @@
     "JUnit.Tests.getBooking.executor": "Run",
     "JUnit.Tests.getBookingById.executor": "Run",
     "JUnit.Tests.updateBooking.executor": "Run",
+    "JUnit.XmlTests.createBooking.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "cover-rest-of-json",
+    "git-widget-placeholder": "add-xml-tests",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
@@ -67,7 +67,7 @@
       <recent name="C:\Users\Dan\Projects\api-java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Tests.getBooking">
+  <component name="RunManager" selected="JUnit.XmlTests.createBooking">
     <configuration name="Tests.createBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-commons" />
       <extension name="coverage">
@@ -116,22 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.getBookingById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-commons" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.Tests" />
-      <option name="METHOD_NAME" value="getBookingById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tests.updateBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-commons" />
       <extension name="coverage">
@@ -148,13 +132,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="XmlTests.createBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-commons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.XmlTests" />
+      <option name="METHOD_NAME" value="createBooking" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.XmlTests.createBooking" />
         <item itemvalue="JUnit.Tests.getBooking" />
         <item itemvalue="JUnit.Tests.updateBooking" />
         <item itemvalue="JUnit.Tests.deleteBooking" />
         <item itemvalue="JUnit.Tests.createBooking" />
-        <item itemvalue="JUnit.Tests.getBookingById" />
       </list>
     </recent_temporary>
   </component>
