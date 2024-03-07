@@ -1,6 +1,7 @@
 package test;
 
 import groovy.util.logging.Slf4j;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -55,7 +56,7 @@ public class Tests {
     void createBooking()
     {
         BookingDetailsPojo bookingDetailsPojo = new BookingDetailsPojo(true, "breakfast");
-        Response response = restClient.postRequest(bookingDetailsPojo, "/booking");
+        Response response = restClient.postRequest(bookingDetailsPojo, "/booking", ContentType.JSON);
         restClient.verifySuccessfulStatus(response);
     }
 
