@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47c28318-c1bf-4106-ac38-f39ca8da4db2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rest-commons/src/main/java/test/XmlTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/src/main/java/pojos/XmlBookingPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-commons/src/main/java/test/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-commons/src/main/java/test/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-commons/target/classes/test/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/rest-commons/target/classes/test/Tests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/src/main/java/utils/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/main/java/utils/RestClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,9 +48,10 @@
     "JUnit.XmlTests.createBooking.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "add-xml-tests",
+    "git-widget-placeholder": "add-awaility",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Dan/Projects/api-java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
